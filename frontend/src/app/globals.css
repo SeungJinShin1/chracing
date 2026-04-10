@@ -673,3 +673,95 @@ tbody tr:hover {
     box-shadow: 0 0 40px rgba(0, 229, 255, 0.5);
   }
 }
+
+/* ---- Name Input Modal ---- */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  animation: modal-fade-in 300ms ease forwards;
+}
+
+.modal-card {
+  background: var(--bg-surface);
+  border: 1px solid rgba(0, 229, 255, 0.2);
+  border-radius: var(--radius-lg);
+  padding: var(--space-2xl);
+  width: 90%;
+  max-width: 440px;
+  text-align: center;
+  box-shadow: var(--shadow-lg), 0 0 40px rgba(0, 229, 255, 0.1);
+  animation: modal-pop-in 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+}
+
+.modal-icon {
+  font-size: 3.5rem;
+  margin-bottom: var(--space-md);
+  animation: modal-icon-bounce 1.5s ease-in-out infinite;
+}
+
+.modal-uid-badge {
+  display: inline-block;
+  padding: 4px 16px;
+  background: var(--bg-elevated);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-full);
+  font-family: var(--font-display);
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  letter-spacing: 0.15em;
+  margin-bottom: var(--space-lg);
+}
+
+.modal-input {
+  font-size: 1.1rem;
+  padding: var(--space-md) var(--space-lg);
+  text-align: center;
+  margin-bottom: var(--space-lg);
+  border: 2px solid rgba(0, 229, 255, 0.3);
+  border-radius: var(--radius-md);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.modal-input:focus {
+  border-color: var(--clr-primary);
+  box-shadow: 0 0 0 4px var(--clr-primary-dim), 0 0 20px rgba(0, 229, 255, 0.15);
+}
+
+.modal-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+@keyframes modal-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes modal-pop-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.7) translateY(30px);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.03) translateY(-5px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes modal-icon-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+

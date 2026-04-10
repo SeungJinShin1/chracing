@@ -53,6 +53,11 @@ interface RacingStore {
   topBestTime: number | null;
   setTopBestTime: (t: number | null) => void;
 
+  // ---- Pending NFC Registration ----
+  pendingNfcUid: string | null;
+  setPendingNfcUid: (uid: string | null) => void;
+  clearPendingNfcUid: () => void;
+
   // ---- Toasts ----
   toasts: ToastItem[];
   addToast: (type: ToastItem["type"], message: string) => void;
@@ -91,6 +96,11 @@ export const useRacingStore = create<RacingStore>((set, get) => ({
   // Ghost Pacer
   topBestTime: null,
   setTopBestTime: (t) => set({ topBestTime: t }),
+
+  // Pending NFC Registration
+  pendingNfcUid: null,
+  setPendingNfcUid: (uid) => set({ pendingNfcUid: uid }),
+  clearPendingNfcUid: () => set({ pendingNfcUid: null }),
 
   // Toasts
   toasts: [],

@@ -22,6 +22,7 @@ import Confetti from "@/components/Confetti";
 import StatusBadge from "@/components/StatusBadge";
 import ToastContainer from "@/components/Toast";
 import LeaderboardTable from "@/components/LeaderboardTable";
+import NameInputModal from "@/components/NameInputModal";
 import { formatTime } from "@/hooks/useRacingTimer";
 
 export default function RacingPage() {
@@ -121,6 +122,7 @@ export default function RacingPage() {
       </div>
 
       {/* Overlays */}
+      <NameInputModal />
       <Confetti />
       <ToastContainer />
     </div>

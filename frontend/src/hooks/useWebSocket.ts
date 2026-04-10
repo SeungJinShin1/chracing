@@ -37,6 +37,7 @@ export function useWebSocket() {
     startTime,
     addToast,
     resetRace,
+    setPendingNfcUid,
   } = useRacingStore();
 
   // Use refs for values accessed in WS callback to avoid stale closures
@@ -93,12 +94,13 @@ export function useWebSocket() {
               });
               addToast("info", `${userData.name} 태그 인식됨`);
             } else {
-              setCurrentRacer({ uid, name: `신규(${uid.slice(-4)})`, bestTime: 999.99 });
-              addToast("info", `새 태그 감지: ${uid.slice(-4)}`);
+              // Unregistered tag → open name input modal
+              setPendingNfcUid(uid);
             }
           } catch (err) {
-            setCurrentRacer({ uid, name: `태그(${uid.slice(-4)})`, bestTime: 999.99 });
-            addToast("error", "Firebase 사용자 조회 실패");
+            // Firebase error → still let them register
+            setPendingNfcUid(uid);
+            addToast("error", "Firebase 조회 실패 — 이름을 직접 입력해주세요.");
           }
           break;
         }
@@ -170,6 +172,7 @@ export function useWebSocket() {
       startZombieTimer,
       clearZombieTimer,
       resetRace,
+      setPendingNfcUid,
     ]
   );
 
