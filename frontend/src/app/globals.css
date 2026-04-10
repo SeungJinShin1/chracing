@@ -301,8 +301,8 @@ body {
 .table-container {
   overflow-x: auto;
   overflow-y: auto;
-  max-height: calc(100vh - 380px);
-  min-height: 400px;
+  max-height: calc(100vh - 280px);
+  min-height: 550px;
   border-radius: var(--radius-md);
   border: 1px solid rgba(255, 255, 255, 0.05);
   background: var(--bg-surface);
@@ -443,19 +443,19 @@ tbody tr:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--space-xl);
-  padding: var(--space-2xl);
+  gap: var(--space-2xl);
+  padding: var(--space-3xl);
   background: #111;
   border-radius: var(--radius-lg);
   border: 4px solid #333;
 }
 
 .traffic-light__bulb {
-  width: 96px;
-  height: 96px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   transition: all var(--transition-normal);
-  border: 4px solid rgba(255, 255, 255, 0.1);
+  border: 6px solid rgba(255, 255, 255, 0.1);
 }
 
 .traffic-light__bulb--red {

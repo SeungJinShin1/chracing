@@ -12,9 +12,9 @@ export default function Timer({ size = "lg" }: { size?: "lg" | "md" | "sm" }) {
   const racingState = useRacingStore((s) => s.racingState);
 
   const sizeClass = {
-    lg: { fontSize: "6rem" },
-    md: { fontSize: "3.5rem" },
-    sm: { fontSize: "2rem" },
+    lg: { fontSize: "9rem" },
+    md: { fontSize: "5rem" },
+    sm: { fontSize: "3rem" },
   }[size];
 
   const stateClass = `timer--${racingState.toLowerCase()}`;
