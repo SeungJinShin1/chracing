@@ -31,7 +31,7 @@ export default function LeaderboardTable() {
     const q = query(
       collection(db, "users"),
       orderBy("bestTime", "asc"),
-      limit(10)
+      limit(100)
     );
 
     const unsubscribe = onSnapshot(

@@ -105,7 +105,7 @@ export default function RacingPage() {
           {/* Right: Racer Card + Mini Leaderboard */}
           <div
             className="flex-col gap-lg"
-            style={{ width: "480px", alignSelf: "start", paddingTop: "var(--space-lg)" }}
+            style={{ width: "600px", alignSelf: "start", paddingTop: "var(--space-lg)" }}
           >
             <RacerCard />
             <div>
