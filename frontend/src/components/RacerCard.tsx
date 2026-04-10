@@ -35,11 +35,11 @@ export default function RacerCard() {
         borderWidth: "2px",
       }}
     >
-      <div className="flex-between" style={{ marginBottom: "8px" }}>
-        <span className="heading heading--sm">RACER</span>
+      <div className="flex-between" style={{ marginBottom: "12px" }}>
+        <span className="heading heading--sm" style={{ fontSize: "1rem" }}>RACER</span>
         <span
           style={{
-            fontSize: "0.7rem",
+            fontSize: "1rem",
             color: "var(--text-muted)",
             fontFamily: "var(--font-display)",
           }}
@@ -49,15 +49,15 @@ export default function RacerCard() {
       </div>
       <div
         style={{
-          fontSize: "1.75rem",
+          fontSize: "2.5rem",
           fontWeight: 700,
-          marginBottom: "8px",
+          marginBottom: "12px",
         }}
       >
         {currentRacer.name}
       </div>
-      <div style={{ color: "var(--text-secondary)", fontSize: "0.85rem" }}>
-        <span style={{ fontFamily: "var(--font-display)", fontSize: "0.7rem", marginRight: "6px" }}>
+      <div style={{ color: "var(--text-secondary)", fontSize: "1.25rem" }}>
+        <span style={{ fontFamily: "var(--font-display)", fontSize: "1rem", marginRight: "8px" }}>
           BEST
         </span>
         {currentRacer.bestTime >= 999

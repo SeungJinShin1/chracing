@@ -81,9 +81,9 @@ export default function LeaderboardTable() {
       <table>
         <thead>
           <tr>
-            <th style={{ width: "60px" }}>RANK</th>
+            <th style={{ width: "80px" }}>RANK</th>
             <th>NAME</th>
-            <th style={{ width: "140px", textAlign: "right" }}>BEST TIME</th>
+            <th style={{ width: "180px", textAlign: "right" }}>BEST TIME</th>
           </tr>
         </thead>
         <tbody>
@@ -115,7 +115,7 @@ export default function LeaderboardTable() {
                   style={{
                     textAlign: "right",
                     fontFamily: "var(--font-display)",
-                    fontSize: "0.85rem",
+                    fontSize: "1.25rem",
                     color: i === 0 ? "var(--clr-secondary)" : "var(--text-primary)",
                   }}
                 >

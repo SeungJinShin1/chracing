@@ -62,9 +62,9 @@ export default function RacingPage() {
           style={{
             display: "grid",
             gridTemplateColumns: "auto 1fr auto",
-            gap: "var(--space-2xl)",
+            gap: "var(--space-3xl)",
             alignItems: "center",
-            minHeight: "60vh",
+            minHeight: "70vh",
           }}
         >
           {/* Left: Traffic Light */}
@@ -105,7 +105,7 @@ export default function RacingPage() {
           {/* Right: Racer Card + Mini Leaderboard */}
           <div
             className="flex-col gap-lg"
-            style={{ width: "320px", alignSelf: "start", paddingTop: "var(--space-xl)" }}
+            style={{ width: "480px", alignSelf: "start", paddingTop: "var(--space-lg)" }}
           >
             <RacerCard />
             <div>
